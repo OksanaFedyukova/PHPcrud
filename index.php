@@ -49,7 +49,7 @@
 
                                     if(mysqli_num_rows($query_run) > 0)
                                     {
-                                        foreach($query_run as $student)
+                                        foreach($query_run as $comidas)
                                         {
                                             ?>
                                             <tr>
@@ -62,7 +62,7 @@
                                                     <a href="student-view.php?id=<?= $comidas['id']; ?>" class="btn btn-info btn-sm">View</a>
                                                     <a href="student-edit.php?id=<?= $comidas['id']; ?>" class="btn btn-success btn-sm">Edit</a>
                                                     <form action="code.php" method="POST" class="d-inline">
-                                                        <button type="submit" name="delete_student" value="<?=$comidas['id'];?>" class="btn btn-danger btn-sm">Delete</button>
+                                                        <button type="submit" name="delete_meal" value="<?=$comidas['id'];?>" class="btn btn-danger btn-sm">Delete</button>
                                                     </form>
                                                 </td>
                                             </tr>
